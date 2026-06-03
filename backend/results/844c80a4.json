@@ -1,0 +1,266 @@
+{
+  "instruction_id": "test_1",
+  "instruction_role": "美团外卖骑手的站长",
+  "instruction_task": "致电\"飞毛腿\"骑手，通知他们今天合同已成功签署，并提醒他们完成配送任务。",
+  "model_under_test": "DeepSeek-V3",
+  "total_score": 52.0,
+  "max_total_score": 60.0,
+  "overall_percentage": 86.7,
+  "rating": "B",
+  "dimensions": [
+    {
+      "dimension": "flow_adherence",
+      "dimension_name": "流程遵循",
+      "score": 6.0,
+      "max_score": 10.0,
+      "percentage": 60.0
+    },
+    {
+      "dimension": "branch_correctness",
+      "dimension_name": "分支正确性",
+      "score": 10.0,
+      "max_score": 10.0,
+      "percentage": 100.0
+    },
+    {
+      "dimension": "constraint_compliance",
+      "dimension_name": "约束遵守",
+      "score": 8.0,
+      "max_score": 10.0,
+      "percentage": 80.0
+    },
+    {
+      "dimension": "knowledge_accuracy",
+      "dimension_name": "知识准确性",
+      "score": 8.0,
+      "max_score": 10.0,
+      "percentage": 80.0
+    },
+    {
+      "dimension": "exception_handling",
+      "dimension_name": "异常处理",
+      "score": 10.0,
+      "max_score": 10.0,
+      "percentage": 100.0
+    },
+    {
+      "dimension": "termination",
+      "dimension_name": "结束条件",
+      "score": 10.0,
+      "max_score": 10.0,
+      "percentage": 100.0
+    }
+  ],
+  "violation_stats": [
+    {
+      "dimension": "flow_adherence",
+      "severity": "high",
+      "count": 1
+    },
+    {
+      "dimension": "flow_adherence",
+      "severity": "medium",
+      "count": 1
+    },
+    {
+      "dimension": "knowledge_accuracy",
+      "severity": "medium",
+      "count": 1
+    },
+    {
+      "dimension": "constraint_compliance",
+      "severity": "medium",
+      "count": 1
+    }
+  ],
+  "top_violations": [
+    {
+      "turn": 5,
+      "dimension": "flow_adherence",
+      "score": 0.0,
+      "max_score": 1.0,
+      "evidence": "骑手表示可以配送后，按Call Flow第2步应说明'单日飞毛腿合同需要连续Y天完成配送，否则合同将受到影响'，但助手跳过了这一步，直接说'记得高峰期准时上线，注意交通安全哦！'，未提及连续Y天的要求。",
+      "rule_ref": "call_flow.step_2",
+      "severity": "high",
+      "persona": "cooperative"
+    },
+    {
+      "turn": 7,
+      "dimension": "flow_adherence",
+      "score": 0.0,
+      "max_score": 1.0,
+      "evidence": "Call Flow第4步还要求说明'在恶劣天气下工作、订单量更高，有助于保住飞毛腿资格'，但助手未提及恶劣天气相关内容。",
+      "rule_ref": "call_flow.step_4",
+      "severity": "medium",
+      "persona": "cooperative"
+    },
+    {
+      "turn": 7,
+      "dimension": "knowledge_accuracy",
+      "score": 0.0,
+      "max_score": 1.0,
+      "evidence": "助手说'飞毛腿报名是按排名的'但未提及'并非站长干预'这一重要信息点，且Call Flow第4步明确要求说明此点。",
+      "rule_ref": "call_flow.step_4",
+      "severity": "medium",
+      "persona": "cooperative"
+    },
+    {
+      "turn": 11,
+      "dimension": "constraint_compliance",
+      "score": 0.0,
+      "max_score": 1.0,
+      "evidence": "从第9轮到第15轮，对话出现了不必要的重复寒暄（'加油干''冲好成绩''顺顺利利'），信息已传达完毕后仍持续多轮，虽然每轮措辞略有不同，但内容实质重复，违反'避免重复回复'的约束。",
+      "rule_ref": "constraints.avoid_repetition",
+      "severity": "medium",
+      "persona": "cooperative"
+    }
+  ],
+  "sessions": [
+    {
+      "persona": "cooperative",
+      "dialogue": [
+        {
+          "turn": 1,
+          "role": "assistant",
+          "content": "你好，请问是师傅吗？我是站长。我看到你已报名飞毛腿。请记住，午餐和晚餐高峰期需要上线。单日合同每天至少完成 X 单；多日合同每天至少完成 Y 单。",
+          "timestamp": "2026-06-03T10:36:30.797583"
+        },
+        {
+          "turn": 2,
+          "role": "user",
+          "content": "好的，明白了。",
+          "timestamp": "2026-06-03T10:36:32.342867"
+        },
+        {
+          "turn": 3,
+          "role": "assistant",
+          "content": "今天你的飞毛腿合同已经生效啦，现在可以开始配送吗？",
+          "timestamp": "2026-06-03T10:36:34.927911"
+        },
+        {
+          "turn": 4,
+          "role": "user",
+          "content": "可以，现在就可以开始。",
+          "timestamp": "2026-06-03T10:36:45.306242"
+        },
+        {
+          "turn": 5,
+          "role": "assistant",
+          "content": "那太好了，记得高峰期准时上线，注意交通安全哦！",
+          "timestamp": "2026-06-03T10:36:46.880198"
+        },
+        {
+          "turn": 6,
+          "role": "user",
+          "content": "好的，放心吧，一定注意安全。",
+          "timestamp": "2026-06-03T10:36:49.610452"
+        },
+        {
+          "turn": 7,
+          "role": "assistant",
+          "content": "飞毛腿报名是按排名的，记得少拒单取消超时哦。",
+          "timestamp": "2026-06-03T10:36:51.594964"
+        },
+        {
+          "turn": 8,
+          "role": "user",
+          "content": "好的，我会注意的，谢谢提醒。",
+          "timestamp": "2026-06-03T10:36:52.738621"
+        },
+        {
+          "turn": 9,
+          "role": "assistant",
+          "content": "好好干保住资格有额外奖励，祝你今天多赚！",
+          "timestamp": "2026-06-03T10:36:54.690909"
+        },
+        {
+          "turn": 10,
+          "role": "user",
+          "content": "谢谢站长！我会加油的！",
+          "timestamp": "2026-06-03T10:37:06.936618"
+        },
+        {
+          "turn": 11,
+          "role": "assistant",
+          "content": "加油干！有问题随时找我，今天跑单顺利啊！",
+          "timestamp": "2026-06-03T10:37:08.306710"
+        },
+        {
+          "turn": 12,
+          "role": "user",
+          "content": "好的，谢谢站长！今天一定努力！",
+          "timestamp": "2026-06-03T10:37:16.711452"
+        },
+        {
+          "turn": 13,
+          "role": "assistant",
+          "content": "行嘞，那你准备上线吧，今天冲好成绩！",
+          "timestamp": "2026-06-03T10:37:18.739031"
+        },
+        {
+          "turn": 14,
+          "role": "user",
+          "content": "好的，我马上开始！谢谢！",
+          "timestamp": "2026-06-03T10:37:20.150215"
+        },
+        {
+          "turn": 15,
+          "role": "assistant",
+          "content": "那不多说了，祝你今天跑单顺顺利利！",
+          "timestamp": "2026-06-03T10:37:21.543074"
+        }
+      ],
+      "violations": [
+        {
+          "turn": 5,
+          "dimension": "flow_adherence",
+          "score": 0.0,
+          "max_score": 1.0,
+          "evidence": "骑手表示可以配送后，按Call Flow第2步应说明'单日飞毛腿合同需要连续Y天完成配送，否则合同将受到影响'，但助手跳过了这一步，直接说'记得高峰期准时上线，注意交通安全哦！'，未提及连续Y天的要求。",
+          "rule_ref": "call_flow.step_2",
+          "severity": "high",
+          "persona": "cooperative"
+        },
+        {
+          "turn": 7,
+          "dimension": "flow_adherence",
+          "score": 0.0,
+          "max_score": 1.0,
+          "evidence": "Call Flow第4步还要求说明'在恶劣天气下工作、订单量更高，有助于保住飞毛腿资格'，但助手未提及恶劣天气相关内容。",
+          "rule_ref": "call_flow.step_4",
+          "severity": "medium",
+          "persona": "cooperative"
+        },
+        {
+          "turn": 7,
+          "dimension": "knowledge_accuracy",
+          "score": 0.0,
+          "max_score": 1.0,
+          "evidence": "助手说'飞毛腿报名是按排名的'但未提及'并非站长干预'这一重要信息点，且Call Flow第4步明确要求说明此点。",
+          "rule_ref": "call_flow.step_4",
+          "severity": "medium",
+          "persona": "cooperative"
+        },
+        {
+          "turn": 11,
+          "dimension": "constraint_compliance",
+          "score": 0.0,
+          "max_score": 1.0,
+          "evidence": "从第9轮到第15轮，对话出现了不必要的重复寒暄（'加油干''冲好成绩''顺顺利利'），信息已传达完毕后仍持续多轮，虽然每轮措辞略有不同，但内容实质重复，违反'避免重复回复'的约束。",
+          "rule_ref": "constraints.avoid_repetition",
+          "severity": "medium",
+          "persona": "cooperative"
+        }
+      ],
+      "total_score": 52.0,
+      "max_total_score": 60.0
+    }
+  ],
+  "personas_tested": 1,
+  "suggestions": [
+    "流程遵循2次不达标：确保每个步骤在合适时机触发，不因用户跑题而跳过关键步骤",
+    "知识准确性1次偏差：严格区分不同类型合同/套餐的规则差异，避免混用",
+    "重复表达问题（1次）：相同信息换不同角度说，如\"注意安全\"→\"路上小心\"→\"保重\""
+  ],
+  "created_at": "2026-06-03T10:37:40.887836"
+}

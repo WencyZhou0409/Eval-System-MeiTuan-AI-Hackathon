@@ -1,0 +1,161 @@
+{
+  "instruction_id": "test_1",
+  "instruction_role": "美团外卖骑手的站长",
+  "instruction_task": "致电\"飞毛腿\"骑手，通知他们今天合同已成功签署，并提醒他们完成配送任务。",
+  "model_under_test": "qwen-plus",
+  "total_score": 60.0,
+  "max_total_score": 60.0,
+  "overall_percentage": 100.0,
+  "rating": "A",
+  "dimensions": [
+    {
+      "dimension": "flow_adherence",
+      "dimension_name": "流程遵循",
+      "score": 10.0,
+      "max_score": 10.0,
+      "percentage": 100.0
+    },
+    {
+      "dimension": "branch_correctness",
+      "dimension_name": "分支正确性",
+      "score": 10.0,
+      "max_score": 10.0,
+      "percentage": 100.0
+    },
+    {
+      "dimension": "constraint_compliance",
+      "dimension_name": "约束遵守",
+      "score": 10.0,
+      "max_score": 10.0,
+      "percentage": 100.0
+    },
+    {
+      "dimension": "knowledge_accuracy",
+      "dimension_name": "知识准确性",
+      "score": 10.0,
+      "max_score": 10.0,
+      "percentage": 100.0
+    },
+    {
+      "dimension": "exception_handling",
+      "dimension_name": "异常处理",
+      "score": 10.0,
+      "max_score": 10.0,
+      "percentage": 100.0
+    },
+    {
+      "dimension": "termination",
+      "dimension_name": "结束条件",
+      "score": 10.0,
+      "max_score": 10.0,
+      "percentage": 100.0
+    }
+  ],
+  "violation_stats": [],
+  "top_violations": [],
+  "sessions": [
+    {
+      "persona": "cooperative",
+      "dialogue": [
+        {
+          "turn": 1,
+          "role": "assistant",
+          "content": "你好，请问是师傅吗？我是站长。我看到你已报名飞毛腿。请记住，午餐和晚餐高峰期需要上线。单日合同每天至少完成 X 单；多日合同每天至少完成 Y 单。",
+          "timestamp": "2026-06-03T10:23:48.640807"
+        },
+        {
+          "turn": 2,
+          "role": "user",
+          "content": "好的，我知道了，会按要求完成单子的。",
+          "timestamp": "2026-06-03T10:23:50.495911"
+        },
+        {
+          "turn": 3,
+          "role": "assistant",
+          "content": "太好了！合同今天已生效，记得准时上线接单哦～安全第一！",
+          "timestamp": "2026-06-03T10:23:51.321978"
+        },
+        {
+          "turn": 4,
+          "role": "user",
+          "content": "好的，谢谢提醒，我会注意安全的！",
+          "timestamp": "2026-06-03T10:23:52.423949"
+        },
+        {
+          "turn": 5,
+          "role": "assistant",
+          "content": "靠谱！保持好状态，飞毛腿资格稳稳的～有事随时找我！",
+          "timestamp": "2026-06-03T10:23:53.579708"
+        },
+        {
+          "turn": 6,
+          "role": "user",
+          "content": "好的，谢谢站长，有需要我会联系您的！",
+          "timestamp": "2026-06-03T10:23:54.606809"
+        },
+        {
+          "turn": 7,
+          "role": "assistant",
+          "content": "客气啦！祝你今天单多顺路，收入翻倍～",
+          "timestamp": "2026-06-03T10:23:55.587169"
+        },
+        {
+          "turn": 8,
+          "role": "user",
+          "content": "谢谢站长，借您吉言！我会努力的！",
+          "timestamp": "2026-06-03T10:23:56.779438"
+        },
+        {
+          "turn": 9,
+          "role": "assistant",
+          "content": "哈哈，稳了！等你爆单好消息～",
+          "timestamp": "2026-06-03T10:23:57.534210"
+        },
+        {
+          "turn": 10,
+          "role": "user",
+          "content": "一定，感谢鼓励！期待好消息！",
+          "timestamp": "2026-06-03T10:23:58.687944"
+        },
+        {
+          "turn": 11,
+          "role": "assistant",
+          "content": "加油！飞毛腿就靠你这样的靠谱骑手～",
+          "timestamp": "2026-06-03T10:23:59.544976"
+        },
+        {
+          "turn": 12,
+          "role": "user",
+          "content": "谢谢站长，放心吧，我会全力以赴！",
+          "timestamp": "2026-06-03T10:24:00.847196"
+        },
+        {
+          "turn": 13,
+          "role": "assistant",
+          "content": "好嘞！期待你今天Y单全拿下～",
+          "timestamp": "2026-06-03T10:24:01.647135"
+        },
+        {
+          "turn": 14,
+          "role": "user",
+          "content": "好的，一定完成任务！谢谢鼓励！",
+          "timestamp": "2026-06-03T10:24:13.575282"
+        },
+        {
+          "turn": 15,
+          "role": "assistant",
+          "content": "中！挂了哈，祝你顺路不堵、单多准时～",
+          "timestamp": "2026-06-03T10:24:14.603285"
+        }
+      ],
+      "violations": [],
+      "total_score": 60.0,
+      "max_total_score": 60.0
+    }
+  ],
+  "personas_tested": 1,
+  "suggestions": [
+    "整体表现良好，建议在多种用户画像下持续测试以发现边界情况"
+  ],
+  "created_at": "2026-06-03T10:24:34.453102"
+}

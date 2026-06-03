@@ -19,8 +19,7 @@ node_modules/
 frontend/dist/
 frontend/.vite/
 
-# 评测结果（演示数据，不上传）
-backend/results/
+# 评测结果目录保留，演示数据随代码一起部署
 
 # 系统文件
 .DS_Store
